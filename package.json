@@ -1,0 +1,16 @@
+{
+  "name": "js_source_modifier",
+  "version": "1.0.0",
+  "description": "Takes the test define and adds entries, alphabetically.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parse",
+    "source",
+    "modifier"
+  ],
+  "author": "Sebastian Gfeller",
+  "license": "MIT"
+}

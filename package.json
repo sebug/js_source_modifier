@@ -12,5 +12,9 @@
     "modifier"
   ],
   "author": "Sebastian Gfeller",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "escodegen": "^1.8.1",
+    "esprima": "^4.0.0"
+  }
 }

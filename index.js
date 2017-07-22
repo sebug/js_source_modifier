@@ -2,6 +2,14 @@ var esprima = require('esprima');
 var es = require('escodegen');
 var fs = require('fs');
 
+if (process.argv.length < 4) {
+    console.log("Usage: node index.js sourceFile requireToAdd");
+    return -1;
+}
+
+var sourceFile = process.argv[2];
+var search = process.argv[3];
+
 function getRequires(program) {
     var res = [];
 
@@ -98,9 +106,7 @@ function insertRequire(elements, r) {
     return result;
 }
 
-var search = 'app/B';
-
-fs.readFile('data/test.js', 'utf8', function (err, data) {
+fs.readFile(sourceFile, 'utf8', function (err, data) {
     var tree = esprima.parseScript(data, { range: true, tokens: true, comment: true });
     var enriched = es.attachComments(tree, tree.comments, tree.tokens);
     
